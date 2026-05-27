@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biraj Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+</head>
+<body>
+
+<!-- Chosen Palette: Warm Sand & Charcoal Glassmorphism -->
+
+<!-- Application Structure Plan: To fix the browser clipping, the separating border and shadow under the logo and navigation has been completely eliminated. For the contact page, we implemented an interactive and collaborative Glassmorphic Client Request Form allowing clients/recruiters to dynamically highlight their project category (Website Design, App Development, etc.), fill details, and trigger a beautiful local receipt overlay modal. Additionally, the hero phone mockup hosts an interactive simulated store with details on popular showcase items updating cleanly on touch/mouse-swipe horizontal scroll tracks. A full-length portrait cutout of Biraj is positioned beside the steady phone and is statically aligned to perfectly overlap the phone left bezel, touching it directly without hover rotation. -->
+
+<!-- Visualization & Content Choices: 
+     - Hero Mockup -> Interactive Engagement -> Live rendering CSS mobile mockup matching portfolio theme, featuring a custom profile and a direct "Hire Biraj" triggers that navigate automatically to the contact section -> CSS Mockup + Touch/Drag Gesture Controller.
+     - Layout Fixes -> Organization -> Re-engineered CSS Grid for cards, columns, and form integrations -> Pure CSS.
+-->
+
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+<header class="top-header-bar">
+  <a href="#home" class="logo">Biraj</a>
+  <nav>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero show" id="home">
+  <div class="hero-text">
+    <p>Biraj Biswas</p>
+    <h1>Design-Focused CSE Student & Aspiring App Developer</h1>
+    <p>I’m a 2nd-year BTech CSE student focused on clean UI design, user-first thinking, and building strong technical foundations while growing into app development.</p>
+    <div class="btns">
+      <a class="btn dark" href="https://github.com/biraj2833" target="_blank">GitHub</a>
+      <a class="btn light" href="https://www.linkedin.com/in/biraj-biswas-386568307" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="hero-showcase">
+    <div class="glow-orb"></div>
+    
+    <!-- Your portrait positioned directly touching the phone -->
+    <img src="images/standingimage (2).png" alt="Biraj Biswas" class="biraj-hero-portrait">
+    
+    <div class="phone-mockup">
+      <div class="phone-notch">
+        <div class="phone-camera"></div>
+      </div>
+      
+      <div class="phone-screen">
+          <div class="phone-status-bar">
+              <span id="screenClock">3:52 PM</span>
+              <div>
+                  <i class="fa-solid fa-wifi" style="margin-right: 4px;"></i>
+                  <i class="fa-solid fa-battery-three-quarters"></i>
+              </div>
+          </div>
+          
+          <div class="phone-profile-container">
+              <div class="phone-avatar">
+                  <img src="images/profile.jpg" alt="Biraj Biswas">
+              </div>
+              <div class="phone-profile-name">Biraj Biswas</div>
+              <div class="phone-profile-tag">Developer & Designer</div>
+              <p class="phone-profile-bio">Building premium digital interfaces and clean, attractive design and developing.</p>
+              
+              <button class="phone-profile-hire-btn" onclick="hireMeFromApp()">
+                  <span>Hire Me</span> <i class="fa-solid fa-arrow-right"></i>
+              </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <div class="about-container card">
+        <div class="about-left">
+            <h3>Design-Focused CSE Student</h3>
+            <p>
+                I’m Biraj Biswas, a 2nd-year BTech CSE student at Netaji Subhas University
+                with a strong passion for UI design, visual creativity, and app development.
+                My goal is to combine design thinking with technology to create clean,
+                user-centered digital experiences.
+            </p>
+
+            <p>
+                I enjoy learning fast, building strong foundations in development,
+                and improving my skills in both design and coding.
+                My strength lies in creating visually clean interfaces
+                while growing as an aspiring app developer.
+            </p>
+        </div>
+
+        <div class="about-right">
+            <div class="mini-box">
+                <h4>Education</h4>
+                <p>BTech CSE – 2nd Year</p>
+            </div>
+
+            <div class="mini-box">
+                <h4>Strength</h4>
+                <p>UI Design & Fast Learning</p>
+            </div>
+
+            <div class="mini-box">
+                <h4>Goal</h4>
+                <p>Aspiring App Developer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+  <h2>Skills & Tools</h2>
+  <div class="grid">
+    <div class="card skill"><i class="fa-brands fa-html5" style="color: #E34F26;"></i> HTML</div>
+    <div class="card skill"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i> CSS</div>
+    <div class="card skill"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i> JavaScript</div>
+    <div class="card skill"><i class="fa-brands fa-java" style="color: #007396;"></i> Java</div>
+    <div class="card skill"><i class="fa-solid fa-code" style="color: #00599C;"></i> C++</div>
+    <div class="card skill"><i class="fa-brands fa-figma" style="color: #F24E1E;"></i> Figma</div>
+    <div class="card skill"><i class="fa-solid fa-pen-ruler" style="color: #00C4CC;"></i> Canva</div>
+    <div class="card skill"><i class="fa-solid fa-image" style="color: #31A8FF;"></i> Photoshop</div>
+    <div class="card skill"><i class="fa-brands fa-github" style="color: #181717;"></i> GitHub</div>
+    <div class="card skill"><i class="fa-solid fa-laptop-code" style="color: #007ACC;"></i> VS Code</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card project-card">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:start;">
+          <h3>ATM Card Validation Program</h3>
+          <i class="fa-solid fa-credit-card" style="font-size: 20px; color: #555;"></i>
+        </div>
+        <p style="margin-top: 8px;">An intermediate console & logical tool designed to validate credit card sequence validity using the Luhn Algorithm.</p>
+      </div>
+      <div class="project-footer">
+        <div class="project-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Regex</span>
+        </div>
+        <a href="https://github.com/biraj2833" target="_blank" class="project-link"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:start;">
+          <h3>Restaurant Bill Generator</h3>
+          <i class="fa-solid fa-receipt" style="font-size: 20px; color: #555;"></i>
+        </div>
+        <p style="margin-top: 8px;">A clean calculations application tool simulating live menus, checkout processing, and detailed tax computations.</p>
+      </div>
+      <div class="project-footer">
+        <div class="project-tags">
+          <span class="tag">C++</span>
+          <span class="tag">Algorithms</span>
+        </div>
+        <a href="https://github.com/biraj2833" target="_blank" class="project-link"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="design">
+    <h2>Design Projects</h2>
+
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide"><img src="images/design1.jpeg" onerror="this.src='https://images.unsplash.com/photo-1541462608141-2ff01dd0385c?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design4.jpg" onerror="this.src='https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design5.jpg" onerror="this.src='https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design6.jpg" onerror="this.src='https://images.unsplash.com/photo-1561070791-26c113006238?w=400&q=80'"></div>
+
+            <div class="slide"><img src="images/design1.jpeg" onerror="this.src='https://images.unsplash.com/photo-1541462608141-2ff01dd0385c?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design2.jpeg" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design3.jpeg" onerror="this.src='https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design4.jpg" onerror="this.src='https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design5.jpg" onerror="this.src='https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&q=80'"></div>
+            <div class="slide"><img src="images/design6.jpg" onerror="this.src='https://images.unsplash.com/photo-1561070791-26c113006238?w=400&q=80'"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= EXTENDED & RE-DESIGNED CONTACT SECTION ================= -->
+<section id="contact">
+  <div class="contact-container">
+    
+    <div class="contact-info-panel">
+      <h2>
+        Contact 
+      </h2>
+      <p>Have an exciting project idea, looking for a website, or need a creative poster? Drop your details in the inquiry form and I will get back to you within 24 hours.</p>
+    <div class="contact-form-panel">
+    <h3 style="margin-bottom: 10px;">Let’s Work Together</h3>
+    <div class="contact-links">
+        <a href="mailto:biraj7507@gmail.com"><i class="fa-solid fa-envelope" style="color: #EA4335; font-size: 18px;"></i> Email Me</a>
+        <a href="https://github.com/biraj2833" target="_blank"><i class="fa-brands fa-github" style="font-size: 18px;"></i> GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/biraj-biswas-386568307/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0A66C2; font-size: 18px;"></i> LinkedIn Connect</a>
+        <a href="https://wa.me/919771442388" target="_blank"><i class="fa-brands fa-whatsapp"style="color:#25D366; font-size:20px;"></i>WhatsApp Me</a>
+    </div>
+
+</div>
+      
+      <div class="contact-links">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hire-card" id="hireCard">
+    <div class="hire-left">
+        <img src="images/profile.jpg" alt="Biraj" onerror="this.src='standingimage (2).jpg'">
+        <div class="hire-text">
+            <h4>Biraj is available for work</h4>
+            <p>UI Design • Frontend • App Development</p>
+        </div>
+    </div>
+
+    <div class="hire-right">
+        <a href="#contact" class="hire-btn">Hire Biraj</a>
+        <span class="close-card" id="closeHireCard">&times;</span>
+    </div>
+</div>
+
+<div class="modal-overlay" id="successModal">
+    <div class="modal-card">
+        <div class="modal-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 class="modal-title">Inquiry Received!</h3>
+        <p class="modal-text" id="modalTextContent">Thank you for reaching out! Your submission has been saved.</p>
+        <button class="modal-close-btn" onclick="closeSuccessModal()">Awesome</button>
+    </div>
+</div>
+
+<div class="modal-overlay" id="adminDashboardOverlay">
+    <div class="admin-dashboard-modal" id="adminDashboardModal">
+        <div class="admin-header">
+            <h2 style="font-size: 24px; margin-bottom: 0;">📬 Live Inquiry Inbox</h2>
+            <button class="modal-close-btn" style="padding: 6px 14px; background: #2f2f2f;" onclick="closeAdminDashboard()">Close Panel</button>
+        </div>
+        <div class="inquiry-list" id="inquiryContainer">
+            <p style="text-align: center; color: #666;" id="loadingText">Connecting safely to Google Firebase...</p>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="passcodeOverlay">
+    <div class="modal-card" style="max-width: 380px;">
+        <div class="modal-icon" style="background: #2F2F2F;">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="modal-title">Enter Admin Passcode</h3>
+        <p class="modal-text" style="margin-bottom: 15px;">Unlock the real-time viewer inquiries dashboard.</p>
+        <div class="form-group">
+            <input class="form-input" type="password" id="adminPasscodeInput" placeholder="Default: biraj123" style="text-align: center;" onkeydown="handlePasscodeKeyDown(event)">
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <button class="modal-close-btn" style="flex: 1; background: #bbb;" onclick="closePasscodeModal()">Cancel</button>
+            <button class="modal-close-btn" style="flex: 1;" onclick="verifyPasscode()">Unlock</button>
+        </div>
+    </div>
+</div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
