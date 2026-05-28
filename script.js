@@ -22,6 +22,16 @@ function activeNavSpy() {
         }
     });
 }
+// ================= MOBILE NAV =================
+
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.querySelector(".top-header-bar nav");
+
+menuToggle.addEventListener("click", () => {
+
+    navbar.classList.toggle("show-menu");
+
+});
 
 // ================= SCROLL REVEAL =================
 
