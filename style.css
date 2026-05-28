@@ -1256,250 +1256,163 @@
         font-size: 18px;
     }
 }
-/* ================= FINAL MOBILE FIX ================= */
+/* ================= CLEAN MOBILE HERO ================= */
 
 @media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
-    section {
-        padding: 110px 20px 70px;
-    }
-
-    /* NAVBAR */
-
-    .top-header-bar {
-
-        width: 100%;
-
-        height: 80px;
-
-        padding: 0 20px;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: space-between;
-
-        flex-direction: row;
-    }
-
-    .logo {
-
-        display: block;
-
-        font-size: 28px;
-    }
-
-    .menu-toggle {
-
-        display: block;
-
-        font-size: 24px;
-    }
-
-    .top-header-bar nav {
-
-        position: fixed;
-
-        top: 80px;
-
-        left: -100%;
-
-        width: 100%;
-
-        background: rgba(255,255,255,0.96);
-
-        backdrop-filter: blur(20px);
-
-        padding: 30px 20px;
-
-        transition: 0.4s ease;
-
-        border-radius: 0;
-    }
-
-    .top-header-bar nav.show-menu {
-
-        left: 0;
-    }
-
-    nav ul {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 24px;
-    }
-
-    /* HERO */
-
-    .hero {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        text-align: center;
-
-        gap: 35px;
-
-        min-height: auto;
-    }
-
-    .hero-text {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-    }
-
-    .hero h1 {
-
-        font-size: 34px;
-
-        line-height: 1.2;
-
-        max-width: 100%;
-    }
-
-    .hero p:last-of-type {
-
-        max-width: 100%;
-
-        font-size: 15px;
-    }
-
-    /* SHOWCASE */
-
     .hero-showcase {
 
-        width: 100%;
+        width: 100% !important;
+        max-width: 320px !important;
 
-        max-width: 320px;
+        height: 300px !important;
 
-        height: 320px;
+        margin: 20px auto 0 !important;
 
-        margin: 0 auto;
+        position: relative !important;
 
-        position: relative;
-
-        overflow: hidden;
-
-        display: flex;
-
-        align-items: flex-end;
-
-        justify-content: center;
+        overflow: visible !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-end !important;
     }
+
+    /* standing image */
 
     .biraj-hero-portrait {
 
-        height: 190px;
+        position: absolute !important;
 
-        left: 50%;
+        height: 280px !important;
 
-        bottom: 0;
+        left: 50% !important;
+        bottom: 0 !important;
 
-        transform: translateX(-95px);
+        transform: translateX(-88px) !important;
+
+        z-index: 3 !important;
+
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08)) !important;
     }
+
+    /* phone */
 
     .phone-mockup {
 
-        width: 150px;
+        position: absolute !important;
 
-        height: 260px;
+        width: 160px !important;
 
-        left: 50%;
+        height: 285px !important;
 
-        bottom: 0;
+        left: 50% !important;
 
-        transform: translateX(10px);
+        bottom: 0 !important;
 
-        overflow: hidden;
+        transform: translateX(-15px) !important;
+
+        border: 7px solid #2F2F2F !important;
+
+        border-radius: 34px !important;
+
+        overflow: hidden !important;
+
+        background: #FAF8F5 !important;
+
+        box-shadow:
+            0 12px 28px rgba(0,0,0,0.08) !important;
+
+        z-index: 2 !important;
     }
 
-    /* BUTTONS */
+    .phone-notch {
 
-    .btns {
+        width: 70px !important;
 
-        width: 100%;
+        height: 14px !important;
 
-        display: flex;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
+        border-radius: 0 0 12px 12px !important;
     }
 
-    .btn {
+    .phone-screen {
 
-        min-width: 140px;
+        padding: 20px 10px 12px !important;
 
-        text-align: center;
+        overflow: hidden !important;
     }
 
-    /* ABOUT */
+    /* avatar */
 
-    .about-container {
+    .phone-avatar {
 
-        grid-template-columns: 1fr;
+    width: 55px !important;
 
-        text-align: center;
+    height: 55px !important;
+
+    border-radius: 50% !important;
+
+    overflow: hidden !important;
+
+    background: white !important;
+
+    border: 2px solid #2F2F2F !important;
+
+    margin-bottom: -8px !important;
     }
 
-    /* CONTACT */
+    .phone-avatar img {
+    width: 100% !important;
 
-    .contact-links {
+    height: 100% !important;
 
-        grid-template-columns: 1fr;
+    object-fit: cover !important;
+
+    object-position: center 18% !important;
+
+    transform: scale(1.12) !important;
+
+    border-radius: 50% !important;
+
+    display: block !important;
     }
 
-    /* HIRE CARD */
+    .phone-profile-name {
 
-    .hire-card {
+        font-size: 14px !important;
 
-        width: calc(100% - 24px);
+        line-height: 1.1 !important;
 
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        bottom: 14px;
-
-        padding: 10px;
+        margin-bottom: -2px !important;
     }
 
-    .hire-text h4 {
+    .phone-profile-tag {
 
-        font-size: 14px;
+        font-size: 7.5px !important;
+
+        padding: 4px 8px !important;
     }
 
-    .hire-text p {
+    .phone-profile-bio {
 
-        display: none;
+        font-size: 10px !important;
+
+        line-height: 1.4 !important;
+
+        max-width: 100% !important;
+
+        margin-top: -2px !important;
     }
 
-    .hire-btn {
+    .phone-profile-hire-btn {
 
-        padding: 8px 12px;
+        width: 72px !important;
 
-        font-size: 12px;
+        padding: 5px 8px !important;
+
+        font-size: 8px !important;
+
+        margin-top: 8px !important;
+
+        border-radius: 999px !important;
     }
 }
