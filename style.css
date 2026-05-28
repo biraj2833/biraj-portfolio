@@ -1175,3 +1175,84 @@
 
     transform: translateY(0px) !important;
 }
+/* ================= MOBILE NAVBAR ================= */
+
+.menu-toggle {
+
+    display: none;
+
+    font-size: 24px;
+
+    color: #2F2F2F;
+
+    cursor: pointer;
+
+    z-index: 3000;
+}
+
+@media (max-width: 768px) {
+
+    .top-header-bar {
+
+        height: 80px;
+
+        padding: 0 20px;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+    }
+
+    .logo {
+
+        display: block;
+
+        font-size: 30px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .top-header-bar nav {
+
+        position: fixed;
+
+        top: 80px;
+
+        left: -100%;
+
+        width: 100%;
+
+        padding: 30px 20px;
+
+        background: rgba(255,255,255,0.94);
+
+        backdrop-filter: blur(24px);
+
+        transition: 0.4s ease;
+
+        border-radius: 0;
+
+        z-index: 2500;
+    }
+
+    .top-header-bar nav.show-menu {
+
+        left: 0;
+    }
+
+    nav ul {
+
+        flex-direction: column;
+
+        gap: 26px;
+    }
+
+    nav ul li a {
+
+        font-size: 18px;
+    }
+}
