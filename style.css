@@ -1283,12 +1283,12 @@
 
         position: absolute !important;
 
-        height: 280px !important;
+        height: 350px !important;
 
         left: 50% !important;
         bottom: 0 !important;
 
-        transform: translateX(-88px) !important;
+        transform: translateX(-140px) !important;
 
         z-index: 3 !important;
 
@@ -1301,15 +1301,15 @@
 
         position: absolute !important;
 
-        width: 160px !important;
+        width: 200px !important;
 
-        height: 285px !important;
+        height: 350px !important;
 
         left: 50% !important;
 
         bottom: 0 !important;
 
-        transform: translateX(-15px) !important;
+        transform: translateX(-48px) !important;
 
         border: 7px solid #2F2F2F !important;
 
@@ -1327,9 +1327,9 @@
 
     .phone-notch {
 
-        width: 70px !important;
+        width: 80px !important;
 
-        height: 14px !important;
+        height: 18px !important;
 
         border-radius: 0 0 12px 12px !important;
     }
@@ -1345,9 +1345,9 @@
 
     .phone-avatar {
 
-    width: 55px !important;
+    width: 65px !important;
 
-    height: 55px !important;
+    height: 66px !important;
 
     border-radius: 50% !important;
 
@@ -1357,7 +1357,7 @@
 
     border: 2px solid #2F2F2F !important;
 
-    margin-bottom: -8px !important;
+    margin-bottom: 2px !important;
     }
 
     .phone-avatar img {
@@ -1378,40 +1378,40 @@
 
     .phone-profile-name {
 
-        font-size: 14px !important;
+        font-size: 20px !important;
 
         line-height: 1.1 !important;
 
-        margin-bottom: -2px !important;
+        margin-bottom: 2px !important;
     }
 
     .phone-profile-tag {
 
-        font-size: 7.5px !important;
+        font-size: 10px !important;
 
         padding: 4px 8px !important;
     }
 
     .phone-profile-bio {
 
-        font-size: 10px !important;
+        font-size: 14px !important;
 
         line-height: 1.4 !important;
 
         max-width: 100% !important;
 
-        margin-top: -2px !important;
+        margin-top: 2px !important;
     }
 
     .phone-profile-hire-btn {
 
-        width: 72px !important;
+        width: 100px !important;
 
         padding: 5px 8px !important;
 
-        font-size: 8px !important;
+        font-size: 10px !important;
 
-        margin-top: 8px !important;
+        margin-top: 4px !important;
 
         border-radius: 999px !important;
     }
