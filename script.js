@@ -145,3 +145,75 @@ const sectionObserver = new IntersectionObserver(
 animatedSections.forEach((section) => {
     sectionObserver.observe(section);
 });
+
+// ================= CONTACT FORM (Web3Forms) =================
+
+(function () {
+    const form = document.getElementById("contactForm");
+    const btnText = document.getElementById("cfBtnText");
+    const btnIcon = document.getElementById("cfBtnIcon");
+    const submitBtn = document.getElementById("cfSubmitBtn");
+    const status = document.getElementById("cfStatus");
+
+    if (!form) return;
+
+    function setStatus(msg, type) {
+        status.textContent = msg;
+        status.className = "cf-status " + type;
+    }
+
+    function setLoading(loading) {
+        submitBtn.disabled = loading;
+        if (loading) {
+            btnText.textContent = "Sending…";
+            btnIcon.className = "fa-solid fa-circle-notch fa-spin";
+        } else {
+            btnText.textContent = "Send Message";
+            btnIcon.className = "fa-solid fa-paper-plane";
+        }
+    }
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        setStatus("", "");
+
+        const name = document.getElementById("cfName").value.trim();
+        const email = document.getElementById("cfEmail").value.trim();
+        const message = document.getElementById("cfMessage").value.trim();
+
+        if (!name || !email || !message) {
+            setStatus("Please fill in your name, email and message.", "error");
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setStatus("Please enter a valid email address.", "error");
+            return;
+        }
+
+        setLoading(true);
+
+        const formData = new FormData(form);
+
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        })
+            .then(res => res.json())
+            .then(data => {
+                setLoading(false);
+                if (data.success) {
+                    setStatus("✓ Message sent! I'll get back to you soon.", "success");
+                    form.reset();
+                } else {
+                    setStatus("Something went wrong. Please try again.", "error");
+                }
+            })
+            .catch(() => {
+                setLoading(false);
+                setStatus("Network error. Please check your connection.", "error");
+            });
+    });
+})();
+
