@@ -217,3 +217,30 @@ animatedSections.forEach((section) => {
     });
 })();
 
+// ================= LIGHTBOX MODAL =================
+const sliderImages = document.querySelectorAll(".slide img");
+const lightboxOverlay = document.getElementById("imageLightboxOverlay");
+const lightboxImage = document.getElementById("lightboxImage");
+const closeLightboxBtn = document.getElementById("closeLightbox");
+
+if (sliderImages && lightboxOverlay && lightboxImage) {
+    sliderImages.forEach(img => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", () => {
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightboxOverlay.classList.add("active");
+        });
+    });
+
+    closeLightboxBtn.addEventListener("click", () => {
+        lightboxOverlay.classList.remove("active");
+    });
+
+    lightboxOverlay.addEventListener("click", (e) => {
+        if (e.target === lightboxOverlay) {
+            lightboxOverlay.classList.remove("active");
+        }
+    });
+}
+
